@@ -62,8 +62,6 @@ on post-fs
     # UIM before TI_ST core
     start uim
 
-    insmod /system/lib/modules/st_drv.ko
-    insmod /system/lib/modules/tty_hci.ko
     insmod /system/lib/modules/btwilink.ko
 
     # change /dev/hdcp owner and permission for FQC test
