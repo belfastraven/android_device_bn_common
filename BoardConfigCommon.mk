@@ -216,6 +216,8 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := /sys/class/backlight/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 254
 TW_INCLUDE_CRYPTO := true
+TW_EXCLUDE_MTP := $(if $(shell grep ^CONFIG_USB_CONFIGFS_F_MTP=y$$ \
+$(TARGET_KERNEL_SOURCE)/arch/arm/configs/$(TARGET_KERNEL_CONFIG)),true,)
 #TWRP_EVENT_LOGGING := true
 TW_INPUT_BLACKLIST := kxtj9_accel
 TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/bq27500-0
