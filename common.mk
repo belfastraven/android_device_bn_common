@@ -62,40 +62,37 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     $(call add-to-product-copy-files-if-exists,packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml)
 
-ADDITIONAL_BUILD_PROPERTIES += \
-    ro.opengles.version=131072 \
-    com.ti.omap_enhancement=true \
-    omap.enhancement=true \
-    ro.crypto.state=unencrypted \
-    persist.sys.root_access=3 \
-    ro.sf.lcd_density=240 \
-    ro.nf.profile=2 \
-    ro.nf.level=512 \
-    persist.hwc.bltpolicy=0 \
-    lockscreen.rot_override=true \
-    ro.bq.gpu_to_cpu_unsupported=1 \
-    ro.disableWifiApFirmwareReload=true \
-    media.stagefright.cache-params=18432/20480/15 \
-    ro.ksm.default=1 \
-    ro.carrier=wifi-only \
-    telephony.sms.send=false
+#ADDITIONAL_BUILD_PROPERTIES += \
+#    ro.opengles.version=131072 \
+#    com.ti.omap_enhancement=true \
+#    omap.enhancement=true \
+#    ro.crypto.state=unencrypted \
+#    persist.sys.root_access=3 \
+#    ro.sf.lcd_density=240 \
+#    ro.nf.profile=2 \
+#    ro.nf.level=512 \
+#    persist.hwc.bltpolicy=0 \
+#    lockscreen.rot_override=true \
+#    ro.bq.gpu_to_cpu_unsupported=1 \
+#    ro.disableWifiApFirmwareReload=true \
+#    media.stagefright.cache-params=18432/20480/15 \
+#    ro.ksm.default=1 \
+#    ro.carrier=wifi-only \
+#    telephony.sms.send=false
 
 # Enable scissor optimisation/override commonized setting
-ADDITIONAL_BUILD_PROPERTIES += ro.hwui.disable_scissor_opt=false
-
-# Disable the AssetAtlas service - may use more RAM than it saves
-ADDITIONAL_BUILD_PROPERTIES += config.disable_atlas=true
+#ADDITIONAL_BUILD_PROPERTIES += config.disable_atlas=true
 
 # Avoids retrying for an EGL config w/o EGL_SWAP_BEHAVIOR_PRESERVED
-ADDITIONAL_BUILD_PROPERTIES += debug.hwui.render_dirty_regions=false
+#ADDITIONAL_BUILD_PROPERTIES += debug.hwui.render_dirty_regions=false
 
 PRODUCT_CHARACTERISTICS := tablet
 
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
-ADDITIONAL_BUILD_PROPERTIES += \
-    ro.com.google.locationfeatures=1 \
-    ro.com.google.networklocation=1
+#ADDITIONAL_BUILD_PROPERTIES += \
+#    ro.com.google.locationfeatures=1 \
+#    ro.com.google.networklocation=1
 
 # IO Scheduler (CM12.1+ property)
 #PRODUCT_PROPERTY_OVERRIDES += sys.io.scheduler=bfq

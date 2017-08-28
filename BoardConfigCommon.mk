@@ -144,10 +144,10 @@ MALLOC_SVELTE := true
 USE_CLANG_PLATFORM_BUILD := true
 
 # adb has root
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0 \
-    ro.allow.mock.location=0 \
-    ro.debuggable=1
+#ADDITIONAL_DEFAULT_PROPERTIES += \
+#    ro.secure=0 \
+#    ro.allow.mock.location=0 \
+#gedit    ro.debuggable=1
 
 # Graphics
 USE_OPENGL_RENDERER := true
